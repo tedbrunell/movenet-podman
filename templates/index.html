@@ -1,0 +1,53 @@
+<html>
+  <head>
+    <title>MoveNet - podman</title>
+    <style>
+        .grid-container {
+		display: grid;
+		grid-template-columns: 700px 1000px;
+		width: 1800px;
+		margin-left: auto;
+		margin-right: auto;
+		justify-content: space-evenly;
+		justify-items: center;
+		align-content: space-evenly;
+		align-content: center;
+	}
+	.grid-video {
+		width: 700px;
+	}
+	.grid-text {
+		width: 900px;
+	}
+        h1   {
+		color: red;
+		font-family: arial;
+		margin-top: 30px;
+	  }
+
+	p,ul {
+		color: black;
+		font-size: 24px;
+		font-family: arial;
+	  }
+	pre  {
+		display: block;
+		color: black;
+		font-size: 18px;
+		font-family: monospace;
+	 }
+    </style>
+  </head>
+  <body>
+    <h1 align="center" font="arial">Podman Pose</h1>
+    <div class="grid-container">
+      <div class="grid-video">
+        <img src="{{ url_for('video_feed') }}">
+      </div>
+      <div class="grid-text">
+    	<p>This shows the TensorFlow MoveNet pose estimation model working in a podman container which exposes it via a python flask app.</p>
+      <p>The image will show a mirror image of a single person and their major joints and limbs.</p>
+      </div>
+    </div>
+  </body>
+</html>
